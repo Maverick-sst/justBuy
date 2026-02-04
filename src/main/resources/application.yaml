@@ -1,6 +1,17 @@
 spring:
   application:
     name: Backend
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
   datasource:
     url: ${DB_URL}
     username: ${DB_USER}
@@ -22,4 +33,5 @@ razorpay:
   key:
     id: ${RZP_KEY}
     secret: ${RZP_SECRET}
+
 

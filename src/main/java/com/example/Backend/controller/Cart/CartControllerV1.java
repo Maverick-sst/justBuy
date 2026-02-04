@@ -1,8 +1,11 @@
 package com.example.Backend.controller.Cart;
 
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,16 +25,21 @@ import lombok.RequiredArgsConstructor;
 public class CartControllerV1 {
     private final CartService cartService;
 
+    @GetMapping("/get")
+    public ResponseEntity<List<CartItem>> getCart(@AuthenticationPrincipal UserModel user) {
+        return ResponseEntity.ok(cartService.getCart(user.getId()));
+    }
+
     @PostMapping("/add")
     public ResponseEntity<CartItem> addToCart(
-            @Valid @RequestBody AddToCartRequestV1 request, 
-            @AuthenticationPrincipal UserModel user
-    ) {
+            @Valid @RequestBody AddToCartRequestV1 request,
+            @AuthenticationPrincipal UserModel user) {
         return ResponseEntity.ok(cartService.addToCart(user.getId(), request.getProductId(), request.getQuantity()));
     }
+
     @DeleteMapping("/clear")
-    public ResponseEntity<String> clearCart(@AuthenticationPrincipal UserModel user){
+    public ResponseEntity<String> clearCart(@AuthenticationPrincipal UserModel user) {
         cartService.clearCart(user.getId());
-        return ResponseEntity.ok("Cart cleared successfully!")
+        return ResponseEntity.ok("Cart cleared successfully!");
     }
 }
