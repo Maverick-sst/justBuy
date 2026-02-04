@@ -547,23 +547,6 @@ justbuy-backend/
 └── README.md                        # This file
 ```
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Development Guidelines
-
-- Follow Java coding conventions
-- Write meaningful commit messages
-- Add unit tests for new features
-- Update documentation as needed
-- Ensure all tests pass before submitting PR
 
 ## 📝 License
 
@@ -572,23 +555,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- GitHub: [@Maverick-sst](https://github.com/Maverick-sst?tab=repositories)
+- Email: mdrehan05.2006@gmail.com
 
-## 🙏 Acknowledgments
 
-- Spring Boot Team for the amazing framework
-- MongoDB Team for the flexible NoSQL database
-- Razorpay for the payment gateway
-- All contributors who help improve this project
 
----
-
-<div align="center">
-
-### ⭐ Star this repository if you find it helpful!
-
-Made with ❤️ using Spring Boot
 
 </div>
